@@ -30,16 +30,16 @@ const HomePage = () => {
                 <path
                   d="M5.40743 10.6481C8.02567 10.6481 10.1482 8.52565 10.1482 5.90741C10.1482 3.28917 8.02567 1.16666 5.40743 1.16666C2.78919 1.16666 0.666687 3.28917 0.666687 5.90741C0.666687 8.52565 2.78919 10.6481 5.40743 10.6481Z"
                   stroke="#0D2159"
-                  stroke-width="1.18519"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.18519"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M11.333 11.833L8.75519 9.2552"
                   stroke="#0D2159"
-                  stroke-width="1.18519"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.18519"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             }
