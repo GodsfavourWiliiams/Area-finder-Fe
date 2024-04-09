@@ -60,7 +60,8 @@ export default function ReviewHero({
 }: Props) {
   const [rating, setRating] = useState(0);
   const [reviews, setReviews] = useState<IReview[]>([]);
-
+  const [submitButtonDisabled, setSubmitButtonDisabled] =
+    useState<boolean>(true);
   useEffect(() => {
     // Load reviews from session storage when the component mounts
     const storedReviews = sessionStorage.getItem('reviews');
@@ -142,6 +143,22 @@ export default function ReviewHero({
   } = form;
 
   const amenities = useWatch({ control, name: 'amenities' });
+  const ratings = useWatch({ control, name: 'rating' });
+  const review = useWatch({ control, name: 'review' });
+
+  useEffect(() => {
+    // Check if amenities has values
+    if (
+      Object.keys(amenities).filter((key: any) => amenities[key]).length ===
+        0 ||
+      ratings == '' ||
+      review === ''
+    ) {
+      setSubmitButtonDisabled(true); // Enable submit button
+    } else {
+      setSubmitButtonDisabled(false); // Disable submit button
+    }
+  }, [amenities, ratings, review]);
 
   const handleStarClick = (index: number) => {
     setRating(index + 1);
@@ -387,6 +404,7 @@ export default function ReviewHero({
                   size="lg"
                   className="p-3.5 w-full text-white h-[52px]"
                   variant="default"
+                  disabled={submitButtonDisabled}
                 >
                   Submit
                 </Button>
