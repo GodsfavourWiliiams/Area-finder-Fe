@@ -147,8 +147,8 @@ const Header = () => {
             <AppLogo background="dark" />
           </Link>
         </div>
-        <div className={cn('gap-4 items-center flex')}>
-          <span>Welcome!</span>
+        <Link href="/review" className={cn('gap-4 items-center flex')}>
+          <span>Review!</span>
           <Image
             className="h-[36px] w-[36px] rounded-full"
             width={16}
@@ -156,7 +156,7 @@ const Header = () => {
             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           />
-        </div>
+        </Link>
       </div>
     </nav>
   );
