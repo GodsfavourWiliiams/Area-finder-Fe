@@ -11,6 +11,8 @@ export const ReviewContainer: FC<ReviewContainerProps> = ({
   className,
 }) => {
   return (
-    <div className={cn('h-[195px] bg-[#F2F6FD]', className)}>{children}</div>
+    <div className={cn('h-full lg:h-[225px] bg-[#F2F6FD]', className)}>
+      {children}
+    </div>
   );
 };
